@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#для унификации между версиями Python 2 и 3 используем print из Python 3
+"""для унификации между версиями Python 2 и 3 используем print из Python 3"""
 from __future__ import print_function
 
 import sys, syslog, optparse, os, errno
 
 from subprocess import Popen, PIPE
 
-#Включаем запись в syslog
+"""Включаем запись в syslog"""
 syslog.openlog(ident="DevOps Test Task",logoption=syslog.LOG_PID, facility=syslog.LOG_LOCAL0)
 
-#создаем парсер параметров
+"""создаем парсер параметров"""
 parser = optparse.OptionParser(usage="%prog <-u --git-url> [-b --git-branch] <-m --vm-name> <-d --target-dir>")
 
 """Согласно заданию, скрипт принимает следующие параметры:
