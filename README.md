@@ -10,12 +10,12 @@
 
 Виртуальная машина с VirtualBox Ubuntu 14.04 amd64 получена выполнением в shell команд:
 
-vagrant box add ubuntu/trusty64
+`vagrant box add ubuntu/trusty64
 mkdir -p ~/vagrant/DevopsTestUbuntu1404amd64
 cd ~/vagrant/DevopsTestUbuntu1404amd64
 mv Vagrantfile Vagrantfile.old
 cat Vagrantfile.old|sed '/config\.vm\.box\ \=/ a\config.vm.define "DevopsTestUbuntu1404amd64" do |t|\nend' > Vagrantfile
-vagrant init ubuntu/trusty64
+vagrant init ubuntu/trusty64`
 
 В git-репозиторий github.com/cpjs0000/devoptest.git загружено содержимое архива test_SDET_DevOps.zip
 
@@ -23,6 +23,6 @@ vagrant init ubuntu/trusty64
 Для доступа по SSH потребуется загрузить свой ключ RSA для текущего пользователя на сервер git.
 
 Скрипт запускается командой:
-./devops-test-task.py -u <URL git-репозитория> -m <имя виртуальной машины> -d <путь к директории для сохранения отчета> -b <ветка git-репозитория>
+`./devops-test-task.py -u <URL git-репозитория> -m <имя виртуальной машины> -d <путь к директории для сохранения отчета> -b <ветка git-репозитория>`
 
 Если хочется видеть вывод лога в текущую консоль, можно добавить опцию -v.
