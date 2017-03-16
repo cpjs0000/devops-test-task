@@ -10,12 +10,12 @@
 
 Виртуальная машина с VirtualBox Ubuntu 14.04 amd64 получена выполнением в shell команд:
 
-`vagrant box add ubuntu/trusty64
-mkdir -p ~/vagrant/DevopsTestUbuntu1404amd64
-cd ~/vagrant/DevopsTestUbuntu1404amd64
-mv Vagrantfile Vagrantfile.old
-cat Vagrantfile.old|sed '/config\.vm\.box\ \=/ a\config.vm.define "DevopsTestUbuntu1404amd64" do |t|\nend' > Vagrantfile
-vagrant init ubuntu/trusty64`
+`vagrant box add ubuntu/trusty64`
+`mkdir -p ~/vagrant/DevopsTestUbuntu1404amd64`
+`cd ~/vagrant/DevopsTestUbuntu1404amd64`
+`mv Vagrantfile Vagrantfile.old`
+`cat Vagrantfile.old|sed '/config\.vm\.box\ \=/ a\config.vm.define "DevopsTestUbuntu1404amd64" do |t|\nend' > Vagrantfile`
+`vagrant init ubuntu/trusty64`
 
 В git-репозиторий github.com/cpjs0000/devoptest.git загружено содержимое архива test_SDET_DevOps.zip
 
