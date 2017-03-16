@@ -6,14 +6,14 @@
 Результатом является скрипт devops-test-task.py
 
 Скрипт запускается командой:
-python devops-test-task.py -u <URL git-репозитория> -m <имя виртуальной машины> -d <путь к директории для сохранения отчета> -b <ветка git-репозитория>
+`python devops-test-task.py -u <URL git-репозитория> -m <имя виртуальной машины> -d <путь к директории для сохранения отчета> -b <ветка git-репозитория>`
 
 Скрипт выполнен на Python с учетом различий между версиями Python 2.7 и 3.4, поэтому
 он одинаково выполняется интерпретаторами обеих этих версий.
 
 Виртуальная машина с VirtualBox Ubuntu 14.04 amd64 может быть создана выполнением в shell команд:
 
-vagrant box add ubuntu/trusty64
+`vagrant box add ubuntu/trusty64
 
 mkdir -p ~/vagrant/DevopsTestUbuntu1404amd64
 
@@ -23,7 +23,7 @@ mv Vagrantfile Vagrantfile.old
 
 cat Vagrantfile.old|sed '/config\.vm\.box\ \=/ a\config.vm.define "DevopsTestUbuntu1404amd64" do |t|\nend' > Vagrantfile
 
-vagrant init ubuntu/trusty64
+vagrant init ubuntu/trusty64`
 
 В git-репозиторий (например github.com/cpjs0000/devoptest.git) должно быть загружено содержимое архива test_SDET_DevOps.zip
 
